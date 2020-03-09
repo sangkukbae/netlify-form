@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>netlify HTML Form</title>
+  </head>
+  <body>
+    <div class="app">
+      <h1>Netlify HTML Form</h1>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify-recaptcha="true"
+        data-netlify="true"
+      >
+        <p>
+          <label
+            >Your Name: <input type="text" name="name" placeholder="Name"
+          /></label>
+        </p>
+        <p>
+          <label
+            >Your Email: <input type="email" name="email" placeholder="Email"
+          /></label>
+        </p>
+        <p>
+          <label
+            >Your Role:
+            <select name="role[]" multiple>
+              <option value="leader">Leader</option>
+              <option value="follower">Follower</option>
+            </select></label
+          >
+        </p>
+        <p>
+          <label
+            >Message:
+            <textarea name="message" placeholder="Message" rows="4"></textarea
+          ></label>
+        </p>
+        <p>
+          <label>File Upload: <input type="file" name="file"/></label>
+        </p>
+        <div data-netlify-recaptcha="true"></div>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
